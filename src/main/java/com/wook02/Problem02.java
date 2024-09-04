@@ -1,9 +1,14 @@
 package com.wook02;
 
+import com.sun.jdi.connect.ListeningConnector;
+
+import java.sql.ClientInfoStatus;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Problem02 {
-    public void problem() {
+    public void problem01() {
         //문제 01
         System.out.print("나이가 어떻게 되세요? : ");
         Scanner sc = new Scanner(System.in);
@@ -72,24 +77,30 @@ public class Problem02 {
         int first = sc.nextInt();
         System.out.print("두 번째 정수를 입력하세요 : ");
         int second = sc.nextInt();
-        System.out.println("연산기호를 입력하세요( +, -, *, /, % ) : ");
-        char calculation = sc.next().charAt(0);
+        System.out.print("연산기호를 입력하세요 (+, -, *, /, %) : ");
+//        char ch = sc.next().charAt(0);
+        String num = sc.next();
+
 
         int result = 0;
 
-        switch (calculation) {
-            case '+' : result = first + second;
+        switch (num) {
+            case "+" : result = first + second;
             break;
-            case '-' : result = first - second;
+            case "-" : result = first - second;
                 break;
-            case '*' : result = first * second;
+            case "/" : result = first / second;
                 break;
-            case '/' : result = first / second;
+            case "%" : result = first % second;
                 break;
-            case '%' : result = first % second;
+            case "*" : result = first * second;
                 break;
-        }
-        System.out.println(first + " " + calculation + " " + second + " = " + result);
+
+            default:
+                System.out.println("입력하신 연산은 없습니다. 프로그램을 종료합니다.");
+                return;
+
+        } System.out.println(first + " " +  num + " " + second + " = " + result);
     }
     public void problem06() {
         // 문제 06
@@ -154,39 +165,6 @@ public class Problem02 {
 
     public void problem08() {
         // 문제 08
-        /* 열심히 일한 람쥐가 급여를 계산해 보려고 합니다.
-         * 월 급여액과 월 매출액을 입력받아 급여를 산정합니다.
-         * 축제 운영 사원은 매출액 대비 보너스율에 명시된 보너스를, 급여 외에 추가로 지급받습니다.
-         *
-         * 단, 보너스율은 입력 받은 월 매출액에 비례하며,
-         * 계산된 보너스 금액을 월 급여액에 더하여 총 급여를 계산합니다.
-         *
-         * 보너스율을 적용하여 출력 예시처럼 출력되도록 프로그램을 만들어 보세요.
-         *
-         * -- 총 급여 계산식 --
-         * 총 급여 = 월 급여  + (매출액 * 보너스율)
-         *
-         * -- 매출액 대비 보너스율 --
-         *   매출액       보너스율
-         * 5천만원 이상      5%
-         * 3천만원 이상      3%
-         * 1천만원 이상      1%
-         * 1천만원 미만      0%
-         *
-         * -- 입력 예시 --
-         * 월 급여 입력 : 3000000
-         * 매출액 입력 : 20000000
-         *
-         * -- 출력 예시 --
-         * ======================
-         * 매출액 : 20000000
-         * 보너스율 : 1%
-         * 월 급여 : 3000000
-         * 보너스 금액 : 200000
-         * ======================
-         * 총 급여 : 3200000
-         * */
-
         Scanner sc = new Scanner(System.in);
         System.out.print("급여액을 입력하세요 : ");
         int salary = sc.nextInt();
@@ -196,8 +174,6 @@ public class Problem02 {
         double bonus = 0;
         int totalsalary = 0;
 
-//        * -- 총 급여 계산식 --
-//                * 총 급여 = 월 급여  + (매출액 * 보너스율)
         if (sales >= 50000000) {
             bonus = 0.05;
         } else if (sales >= 30000000) {
@@ -209,14 +185,32 @@ public class Problem02 {
         }
         totalsalary = salary + (int)(sales * bonus);
         System.out.println("매출액은 : " + sales + "입니다.");
-        System.out.println("보너스율은 : " + bonus + "입니다.");
+        System.out.println("보너스율은 : " + (bonus * 100) + " % " + "입니다.");
         System.out.println("월 급여는 : " + salary + "입니다.");
-        System.out.println("보너스 금액은 : " + (int)(sales*bonus) + "입니다.");
+        System.out.println("보너스 금액은 : " + (int)(sales * bonus) + "입니다.");
         System.out.println("==========================================");
         System.out.println("총 급여는 : " + totalsalary + "입니다." );
-
-
-
     }
 
+    public void problem09() {
+//        9세 이상이면서 110cm 이상인 사람만 놀이기구를 탑승 가능 한 프로그램 만들기
+//        조건 : 나이 조건에 만족하지 않으면 출력문으로 9살 넘으면 오시오.
+//                키 조건에 만족하지 않으면 키 더 크고 오시오.
+        Scanner sc = new Scanner(System.in);
+        System.out.print("나이를 입력하세요 : ");
+        int age = sc.nextInt();
+        System.out.print("키를 입력하세요 : ");
+        int height = sc.nextInt();
+
+        if (age >= 9 && height >= 110) {
+            System.out.println("놀이기구 탑승 가능");
+        } else {
+            if (age < 9) {
+                System.out.println("나이 더 먹고 오세요.");
+            }
+            if (height <= 110) {
+                System.out.println("키 더 크고 오세요.");
+            }
+        }
+    }
 }

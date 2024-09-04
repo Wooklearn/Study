@@ -18,8 +18,9 @@ public class Problem01 {
         // 문제 07
 //        app.problem07();
         // 문제 08
-        app.problem08();
-
+//        app.problem08();
+        // 문제 09
+//        app.problem09();
 
 
 
