@@ -8,14 +8,14 @@ public class Problem04 {
         int sum = 0;
 
         for (int i = 1; i <= 10; i++) {
-            sum+=i;
+            sum += i;
         }
         System.out.println("1~10까지 합 : " + sum);
     }
 
     public void practice02() {
         // 문제 08
-        int random = (int)(Math.random()*10); //랜덤 객체
+        int random = (int) (Math.random() * 10); //랜덤 객체
 
         Scanner sc = new Scanner(System.in);
 
@@ -61,12 +61,6 @@ public class Problem04 {
         int num = sc.nextInt();
 
 
-
-
-
-
-
-
     }
 
     public void practice04() {
@@ -85,4 +79,100 @@ public class Problem04 {
         }
 
     }
+
+    public void practice05() {
+        // 반복문 01
+        int sum = 0;
+
+        for (int i = 1; i <= 10; i++) {
+
+            sum += i;
+        }
+
+
+        System.out.println("sum = " + sum);
     }
+
+    public void practice06() {
+        // 반복문 02
+        Scanner sc = new Scanner(System.in);
+        System.out.print("정수를 입력하세요 : ");
+        int num = sc.nextInt();
+
+        int sum = 0;
+
+        for (int i = 1; i <= num; i++) {
+
+            sum += i;
+
+
+        }
+        System.out.println("1부터 " + num + "까지의 합계는 : " + sum + "입니다.");
+    }
+
+    public void practice07() {
+        /* 1부터 입력 받은 정수까지의 짝수의 합을 출력하세요.
+         *
+         * -- 입력 예시 --
+         * 정수를 입력하세요 : 10
+         *
+         * -- 출력 예시 --
+         * 1부터 10까지 짝수의 합 : 30
+         * */
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("정수를 입력하세요 : ");
+        int num = sc.nextInt();
+
+        int sum = 0;
+
+        for (int i = 1; i <= num; i++) {
+            if (i % 2 == 0) {
+                System.out.println(sum);
+                sum += i;
+            }
+        }
+        System.out.print("입력한 정수까지의 짝수의 합은 : " + sum + "입니다.");
+
+    }
+
+    public void practice08() {
+        /* 문자열을 입력 받아서 문자열의 각 인덱스별로 한 글자씩 출력하세요.
+         * 참고) 문자열의 길이는 String 클래스의 length() 메소드를 이용할 수 있습니다.
+         *
+         * -- 입력 예시 --
+         * 문자열을 입력하세요 : apple
+         *
+         * -- 출력 예시 --
+         * 0 : a
+         * 1 : p
+         * 2 : p
+         * 3 : l
+         * 4 : e
+         * */
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("문자열을 입력하세요 : ");
+        String str = sc.nextLine();
+//        System.out.println(str.charAt(0));
+
+        for (int i = 0; i < str.length(); i++) {
+
+
+
+            System.out.println(str.charAt(i));
+
+
+
+
+        }
+//
+//
+//            System.out.println();
+//
+//
+//        }
+
+    }
+
+}
