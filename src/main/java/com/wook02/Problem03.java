@@ -14,7 +14,13 @@ public class Problem03 {
         // 반복문 03
 //        app.practice07();
         // 반복문 04
-        app.practice08();
+//        app.practice08();
+        // 반복문 05
+//        app.practice09();
+        // 반복문 06
+//        app.practice10();
+        // 반복문 07
+        app.practice11();
 
 
     }
