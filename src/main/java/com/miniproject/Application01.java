@@ -5,12 +5,10 @@ import java.util.Scanner;
 import static com.miniproject.Crops.*;
 
 public class Application01 {
+Crops crops = new Crops();
 
     public static void main(String[] args) {
 
-        private static String selectedCrop = ""; // 선택된 작물 저장
-        private static int growthStage = 0; // 작물 성장 단계
-        private static int money = 0; // 현재 돈
         Scanner sc = new Scanner(System.in);
 
         String selectedCrop = "옥수수";

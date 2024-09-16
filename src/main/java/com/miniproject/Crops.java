@@ -4,6 +4,9 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Crops {
+    private static String selectedCrop = ""; // 선택된 작물 저장
+    private static int growthStage = 0; // 작물 성장 단계
+    private static int money = 0; // 현재 돈
     private static void selectCrop(Scanner sc) {
         System.out.println("작물을 선택하세요:");
         System.out.println("1. 옥수수 (가위바위보 1회, 판매 가격: 50원)");
