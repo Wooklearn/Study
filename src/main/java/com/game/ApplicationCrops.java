@@ -1,9 +1,9 @@
-package com.miniproject;
+package com.game;
 
 import java.util.Random;
 import java.util.Scanner;
 
-public class Application {
+public class ApplicationCrops {
 
     private static String selectedCrop = ""; // 선택된 작물 저장
     private static int growthStage = 0; // 작물 성장 단계
