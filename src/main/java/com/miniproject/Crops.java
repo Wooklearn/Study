@@ -7,7 +7,7 @@ public class Crops {
     private static String selectedCrop = ""; // 선택된 작물 저장
     private static int growthStage = 0; // 작물 성장 단계
     private static int money = 0; // 현재 돈
-    private static void selectCrop(Scanner sc) {
+    static void selectCrop(Scanner sc) {
         System.out.println("작물을 선택하세요:");
         System.out.println("1. 옥수수 (가위바위보 1회, 판매 가격: 50원)");
         System.out.println("2. 감자 (가위바위보 2회, 판매 가격: 200원)");
@@ -35,7 +35,7 @@ public class Crops {
         System.out.println(selectedCrop + "를 선택하셨습니다.");
     }
 
-    private static void growCrop(Scanner sc) {
+    static void growCrop(Scanner sc) {
         if (selectedCrop.isEmpty()) {
             System.out.println("먼저 작물을 선택하세요.");
             return;
@@ -92,7 +92,7 @@ public class Crops {
             }
         }
     }
-    private static void sellCrop() {
+    static void sellCrop() {
         if (selectedCrop.isEmpty()) {
             System.out.println("먼저 작물을 선택하세요.");
         } else {

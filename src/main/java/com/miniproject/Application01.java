@@ -11,10 +11,12 @@ Crops crops = new Crops();
 
         Scanner sc = new Scanner(System.in);
 
-        String selectedCrop = "옥수수";
+
 
 
         while (true) {
+
+            int money = 0;
 
             System.out.println("게임을 시작합니다.");
             System.out.println("현재 돈: " + money + "원");
