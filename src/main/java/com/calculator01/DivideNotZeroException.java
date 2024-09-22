@@ -1,4 +1,4 @@
-package calculatorPractice;
+package com.calculator01;
 
 public class DivideNotZeroException extends RuntimeException {
     public DivideNotZeroException() {

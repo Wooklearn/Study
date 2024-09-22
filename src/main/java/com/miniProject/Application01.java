@@ -1,8 +1,8 @@
-package miniProject;
+package com.miniProject;
 
 import java.util.Scanner;
 
-import static miniProject.Crops.*;
+import static com.miniProject.Crops.*;
 
 public class Application01 {
 Crops crops = new Crops();

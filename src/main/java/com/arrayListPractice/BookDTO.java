@@ -1,4 +1,4 @@
-package arrayListPractice;
+package com.arrayListPractice;
 
 public class BookDTO {
     private int bookNum;

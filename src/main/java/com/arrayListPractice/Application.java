@@ -1,4 +1,4 @@
-package arrayListPractice;
+package com.arrayListPractice;
 
 import java.util.ArrayList;
 import java.util.List;
