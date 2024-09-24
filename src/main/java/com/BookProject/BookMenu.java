@@ -40,6 +40,8 @@ public class BookMenu {
                 case 3:
                 case 4:
                 case 5:
+                    bm.displayAll();
+                    break;
                 case 6:
                     System.out.println("프로그램을 종료합니다.");
                     return;
@@ -49,32 +51,28 @@ public class BookMenu {
             }
             System.out.println("=======================================");
         }
-
-
-
-
     }
 
 
-
-
-
-
     public BookDTO inputBook() {
+        BookDTO bookDTO = new BookDTO();
+
         System.out.println("새 도서를 추가합니다.");
         System.out.print("도서 번호를 입력하세요 : ");
         int bNo = sc.nextInt();
         System.out.print("도서 분류 번호를 입력하세요 (1:인문 / 2:자연과학 / 3:의료 / 4:기타) : ");
         int category = sc.nextInt();
+        sc.nextLine();
         System.out.print("도서 제목을 입력하세요 : ");
         String title = sc.nextLine();
         System.out.print("도서 저자를 입력하세요 : ");
         String author = sc.nextLine();
 
-        BookDTO bookDTO = new BookDTO(bNo, category, title, author);
+        BookDTO bookAdd = new BookDTO(bNo, category, title, author);
 
-        return bookDTO;
+        System.out.println(bookAdd + "가 추가되었습니다.");
 
+        return bookAdd;
 
     }
 
