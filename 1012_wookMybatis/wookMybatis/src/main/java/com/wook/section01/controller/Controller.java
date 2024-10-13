@@ -31,5 +31,16 @@ public class Controller {
     }
 
 
+    public void selectNameEmployee() {
+        List<EmployeeDTO> employeeList = employeeService.selectNameEmployee();
 
+        if (employeeList != null) {
+            printResult.printMemberList(employeeList);
+        } else {
+            printResult.printErrorMessage("selectMember");
+        }
+
+
+
+    }
 }

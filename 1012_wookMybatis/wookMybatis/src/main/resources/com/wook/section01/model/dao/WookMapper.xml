@@ -31,4 +31,13 @@
         EMP_NAME
     </select>
 
+    <select id="selectNameEmployee" resultMap="memberResultMap">
+        SELECT
+        *
+        FROM
+        EMPLOYEE
+        WHERE
+        EMP_NAME = #{empName}
+    </select>
+
 </mapper>

@@ -25,4 +25,17 @@ public class EmployeeService {
         return memberDTO;
 
     }
+
+    public List<EmployeeDTO> selectNameEmployee() {
+
+        SqlSession sqlSession = getSqlSession();
+
+        wookMapper = sqlSession.getMapper(WookMapper.class);
+
+        List<EmployeeDTO> memberDTO = wookMapper.selectNameEmployee();
+
+        sqlSession.close();
+
+        return memberDTO;
+    }
 }

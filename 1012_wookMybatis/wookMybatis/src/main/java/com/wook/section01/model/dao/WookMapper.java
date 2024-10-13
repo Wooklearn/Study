@@ -7,4 +7,7 @@ import java.util.List;
 public interface WookMapper {
 
     List<EmployeeDTO> selectAllEmployee();
+
+    List<EmployeeDTO> selectNameEmployee();
+
 }

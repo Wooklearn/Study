@@ -24,11 +24,14 @@ public class Member {
 
             int no = sc.nextInt();
 
+
+
             switch (no) {
                 case 1:
                     controller.selectAllEmployee();
                     break;
                 case 2:
+                    controller.selectNameEmployee();
                     break;
                 case 3:
                     break;
@@ -36,12 +39,20 @@ public class Member {
                     break;
                 case 5:
                     break;
-                case 9:
-                    return;
 
+
+                default:
+                    System.out.println("잘못 입력하셨습니다. 다시 입력해주세요");
+                    break;
+            }
+
+            if (no == 9) {
+                System.out.println("프로그램을 종료합니다.");
+                return;
             }
 
         } while (true);
+
 
     }
 
