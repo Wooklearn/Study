@@ -1,6 +1,6 @@
 package com.wook.section01.common;
 
-import com.wook.section01.model.dao.wookMapper;
+import com.wook.section01.model.dao.WookMapper;
 import org.apache.ibatis.datasource.pooled.PooledDataSource;
 import org.apache.ibatis.mapping.Environment;
 import org.apache.ibatis.session.Configuration;
@@ -13,7 +13,7 @@ public class Template {
 
     private static String DRIVER = "com.mysql.cj.jdbc.Driver";
     private static String URL = "jdbc:mysql://localhost/employee";
-    private static String USER = "ohgiraffers";
+    private static String USER = "root";
     private static String PASSWORD = "1234";
 
     private static SqlSessionFactory sqlSessionFactory;
@@ -26,9 +26,9 @@ public class Template {
                     new JdbcTransactionFactory(),
                     new PooledDataSource(DRIVER, URL, USER, PASSWORD)
             );
-            Configuration configuration = new Configuration();
+            Configuration configuration = new Configuration(environment);
 
-            configuration.addMapper(wookMapper.class);
+            configuration.addMapper(WookMapper.class);
 
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(configuration);
         }
