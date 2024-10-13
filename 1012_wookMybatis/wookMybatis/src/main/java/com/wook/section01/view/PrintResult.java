@@ -28,7 +28,7 @@ public class PrintResult {
 
         System.out.println("요청하신 직원 조회 결과입니다.");
 
-        for (EmployeeDTO employeeDTO : EmployeeName) {
+        for (EmployeeDTO employeeDTO : name) {
             System.out.println("employeeDTO = " + employeeDTO);
         }
     }
