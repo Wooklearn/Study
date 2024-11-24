@@ -116,9 +116,14 @@ public class MenuController {
     }
 
     @GetMapping("delete")
-    public String deleteMenu(@ModelAttribute MenuDTO menuDTO, Model model) {
+    public String deleteMenu(@ModelAttribute MenuDTO menuDTO, RedirectAttributes rttr, Model model, Locale locale) {
 
         menuService.menuDelete(menuDTO);
+
+
+        rttr.addFlashAttribute("successMessage",
+                messageSource.getMessage("delete", new Object[]{}, locale));
+
         return "redirect:/menu/allList";
     }
 
