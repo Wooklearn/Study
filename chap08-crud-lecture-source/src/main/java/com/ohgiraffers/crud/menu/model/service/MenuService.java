@@ -59,4 +59,10 @@ public class MenuService {
         return menuMapper.menuAll();
 
     }
+
+    public void menuDelete(MenuDTO menuDTO) {
+
+        menuMapper.menuDelete(menuDTO);
+
+    }
 }

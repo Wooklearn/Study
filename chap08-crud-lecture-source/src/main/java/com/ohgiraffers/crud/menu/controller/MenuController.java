@@ -115,7 +115,11 @@ public class MenuController {
 
     }
 
+    @GetMapping("delete")
+    public String deleteMenu(@ModelAttribute MenuDTO menuDTO, Model model) {
 
-
+        menuService.menuDelete(menuDTO);
+        return "redirect:/menu/allList";
+    }
 
 }

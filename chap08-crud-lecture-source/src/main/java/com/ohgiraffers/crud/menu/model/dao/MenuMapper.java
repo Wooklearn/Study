@@ -25,4 +25,6 @@ public interface MenuMapper {
     List<CategoryDTO> categoryList(CategoryDTO category);
 
     List<MenuDTO> menuAll();
+
+    void menuDelete(MenuDTO menuDTO);
 }

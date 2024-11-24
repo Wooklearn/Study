@@ -31,7 +31,7 @@
             <td th:text="${menu.price}"></td>
             <td th:text="${menu.categoryCode}" align="center"></td>
             <td th:text="${menu.orderableStatus}" align="center"></td>
-            <td align="center"><button type="">삭제</button></td>
+            <td align="center"><button th:onclick="'window.location.href=\'/menu/delete?code=' + ${menu.code} + '\''">삭제</button></td>
         </tr>
     </table>
     </table>

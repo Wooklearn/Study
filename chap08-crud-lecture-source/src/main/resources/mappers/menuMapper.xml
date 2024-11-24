@@ -91,4 +91,9 @@
             tbl_menu
     </select>
 
+    <delete id="menuDelete" parameterType="com.ohgiraffers.crud.menu.model.dto.MenuDTO">
+        DELETE FROM tbl_menu
+        WHERE menu_code = ${code};
+    </delete>
+
 </mapper>
