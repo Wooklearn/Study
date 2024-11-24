@@ -73,11 +73,22 @@
 
     <select id="categoryList" resultMap="categoryResultMap" parameterType="com.ohgiraffers.crud.menu.model.dto.CategoryDTO">
         SELECT
-            *
+            menu_code,
+            menu_name,
+            menu_price,
+            category_code,
+            orderable_status
         FROM
             TBL_MENU
         WHERE
             CATEGORY_CODE = #{code}
+    </select>
+
+    <select id="menuAll" resultMap="menuResultMap">
+        select
+            *
+        from
+            tbl_menu
     </select>
 
 </mapper>

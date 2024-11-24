@@ -52,4 +52,11 @@ public class MenuService {
     public List<MenuDTO> findMenu() {
         return menuMapper.findMenu();
     }
+
+
+    public List<MenuDTO> allList() {
+
+        return menuMapper.menuAll();
+
+    }
 }

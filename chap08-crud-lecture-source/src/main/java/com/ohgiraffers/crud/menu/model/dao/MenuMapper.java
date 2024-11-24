@@ -23,4 +23,6 @@ public interface MenuMapper {
     void registNewMenu(MenuDTO newMenu);
 
     List<CategoryDTO> categoryList(CategoryDTO category);
+
+    List<MenuDTO> menuAll();
 }

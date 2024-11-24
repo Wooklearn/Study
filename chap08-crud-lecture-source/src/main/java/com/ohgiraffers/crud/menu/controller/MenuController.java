@@ -104,4 +104,18 @@ public class MenuController {
         return "/menu/categoryList";
     }
 
+    @GetMapping("allList")
+    public String allListSearch(Model model) {
+
+        List<MenuDTO> menuList = menuService.allList();
+
+        model.addAttribute("menuList", menuList);
+
+        return "menu/menuList";
+
+    }
+
+
+
+
 }
