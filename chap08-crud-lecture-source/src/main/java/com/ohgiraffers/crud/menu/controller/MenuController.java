@@ -114,7 +114,7 @@ public class MenuController {
         return "menu/menuList";
 
     }
-
+ 
     @GetMapping("delete")
     public String deleteMenu(@ModelAttribute MenuDTO menuDTO, RedirectAttributes rttr, Model model, Locale locale) {
 
